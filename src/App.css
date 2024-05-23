@@ -44,4 +44,11 @@
 body {
   background-color: aqua;
   margin: 10px;
+  background-image: url('https://cdn.donmai.us/original/42/4d/424da3e3cee09b5ee26c52ac4980d33a.png');
+  background-size: 500px;
+  box-shadow: 10px 10px lightblue;
+  background-position: right;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  border-radius: 25%;
 }
