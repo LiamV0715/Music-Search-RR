@@ -9,7 +9,9 @@ function GalleryItem(props){
         'width': '25vw',
         'height': '20vh',
         'border': '1px solid black',
-        'margin': '2px'
+        'margin': '2px',
+        'border-radius': '25%',
+        'box-shadow': '10px 10px lightblue'
     }
     
     const detailStyle = {
@@ -20,7 +22,10 @@ function GalleryItem(props){
         'backgroundImage': `url(${props.item.artworkUrl100})`,
         'backgroundRepeat': 'no-repeat',
         'backgroundSize': 'cover',
-        'color': 'yellow'
+        'color': 'yellow',
+        'padding': '10px',
+        'border-radius': '10%',
+        'box-shadow': '10px 10px lightblue'
     }
 
     const simpleView = () => {
@@ -44,8 +49,14 @@ function GalleryItem(props){
     }
 
     return (
-        <div onClick={() =>setView(!view)} style={{'display': 'inline-block'}}>
-            <p>One Gallery Item</p>
+        <div onClick={() =>setView(!view)} 
+        //customize gallery posts
+        style={{
+            'display': 'inline-block',
+            'border-radius': '25px',
+            'background-color': 'white'
+        }}>
+            
                 {view ? detailView() : simpleView()}
         </div>
     )
