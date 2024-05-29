@@ -1,15 +1,21 @@
 // Gallery.js
 import { useContext } from "react";
-import GalleryItem from "./GalleryItem";
 import { SongContext } from "./SongContext";
 
-function Gallery() {
-  const songData = useContext(SongContext);
+import GalleryItem from './GalleryItem'
 
-  const songItems = songData.map((item, index) => {
-    return <GalleryItem item={item} key={index} />;
-  });
-  return <div>{songItems}</div>;
+function Gallery(props){
+
+    const display = props.data.map((item,index) => {
+        return (
+            <GalleryItem item={item} key={index} />
+        )
+    })
+    return (
+        <div>
+            {display}
+        </div>
+    )
 }
 
-export default Gallery;
+export default Gallery
