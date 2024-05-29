@@ -12,7 +12,8 @@ function GalleryItem(props) {
     margin: "2px",
     "border-radius": "25%",
     "box-shadow": "10px 10px lightblue",
-    "background-color": "white"
+    "background-color": "white",
+    'padding-left': '5%'
   };
 
   const detailStyle = {
